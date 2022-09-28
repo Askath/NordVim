@@ -65,7 +65,6 @@ require('packer').startup(function(use)
     end
 end)
 
-require("tara.tree")
 require("fidget").setup {}
 require('neoscroll').setup()
 

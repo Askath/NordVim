@@ -1,6 +1,7 @@
 -- Install packer
 require("tara.plugins")
 require("tara.options")
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- Keymaps for better default experience

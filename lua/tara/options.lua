@@ -44,4 +44,4 @@ vim.g.maplocalleader = ' '
 
 vim.keymap.set('n', '<leader>gg', ":LazyGit<CR>", { desc = 'Lazygit' })
 vim.keymap.set('n', '<leader>s', ":SymbolsOutline<CR>", { desc = '[S]tructure' })
-vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>", { desc = '[E]xplorer' })
+vim.keymap.set('n', '<leader>e', ":NvimTreeFindFile<CR>", { desc = '[E]xplorer' })
