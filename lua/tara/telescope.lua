@@ -14,7 +14,7 @@ require('telescope').setup {
             hijack_netrw = true,
             theme = "dropdown",
             path = "%:p:h",
-            respect_gitignore = false,
+            respect_gitignore = true,
             hidden = true,
             grouped = true,
             previewer = false,
