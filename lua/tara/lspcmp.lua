@@ -1,4 +1,5 @@
 require("lsp-format").setup {}
+require("luasnip/loaders/from_vscode").lazy_load()
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)

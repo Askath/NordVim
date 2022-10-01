@@ -24,24 +24,30 @@ end
 -- stylua: ignore start
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Package manager
+
     use 'tpope/vim-fugitive' -- Git commands in nvim
     use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Add git related info in the signs columns and popups
+    use 'kdheepak/lazygit.nvim'
+
     use 'nvim-treesitter/nvim-treesitter' -- Highlight, edit, and navigate code
     use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } } -- Additional textobjects for treesitter
+
     use { "lukas-reineke/lsp-format.nvim" }
     use 'williamboman/mason.nvim' -- Manage external editor tooling i.e LSP servers
     use 'williamboman/mason-lspconfig.nvim' -- Automatically install language servers to stdpath
     use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
     use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } } -- Autocompletion
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
+    use "rafamadriz/friendly-snippets"
+
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
     use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
-    use 'kdheepak/lazygit.nvim'
     use "p00f/nvim-ts-rainbow"
-    use 'simrat39/symbols-outline.nvim'
-    use 'kyazdani42/nvim-web-devicons'
 
+    use 'simrat39/symbols-outline.nvim'
+
+    use 'kyazdani42/nvim-web-devicons'
 
     use 'shaunsingh/nord.nvim'
 
@@ -52,21 +58,16 @@ require('packer').startup(function(use)
     }
 
     use 'karb94/neoscroll.nvim'
-    -- Fuzzy Finder (files, lsp, etc)
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
     use { "nvim-telescope/telescope-file-browser.nvim" }
 
-    -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 }
+    use { 'mattn/emmet-vim' }
 
-    -- Lua
     use {
         "folke/which-key.nvim",
         config = function()
             require("which-key").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
             }
         end
     }
