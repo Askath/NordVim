@@ -42,6 +42,7 @@ require('packer').startup(function(use)
     use 'simrat39/symbols-outline.nvim'
     use 'kyazdani42/nvim-web-devicons'
 
+
     use 'shaunsingh/nord.nvim'
 
     use 'j-hui/fidget.nvim'
@@ -57,8 +58,6 @@ require('packer').startup(function(use)
 
     -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 }
-    use { 'kyazdani42/nvim-tree.lua' }
-
 
     -- Lua
     use {
