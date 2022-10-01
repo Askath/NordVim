@@ -43,7 +43,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.keymap.set('n', '<leader>gg', ":LazyGit<CR>", { desc = 'Lazygit' })
-vim.keymap.set('n', '<leader>ss', ":SymbolsOutline<CR>", { desc = 'Structure' })
+vim.keymap.set('n', '<leader>cs', ":SymbolsOutline<CR>", { desc = 'Structure' })
 vim.keymap.set('n', '<leader>e', ":NvimTreeFindFile<CR>", { desc = 'Explorer' })
 vim.keymap.set('n', '<leader>h', ":noh<CR>")
 
@@ -65,3 +65,7 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
 vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' })
 
 vim.keymap.set('n', '<leader>fk', ":e ~/.config/nvim/lua/tara/options.lua<CR>", { desc = ' Open Config ' })
+
+
+-- Format file
+vim.keymap.set('n', '<leader>ff', ":Format<CR>", { desc = "Format code" })
