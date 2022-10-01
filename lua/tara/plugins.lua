@@ -60,6 +60,18 @@ require('packer').startup(function(use)
     use { 'kyazdani42/nvim-tree.lua' }
 
 
+    -- Lua
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+
     if is_bootstrap then
         require('packer').sync()
     end
@@ -67,6 +79,7 @@ end)
 
 require("fidget").setup {}
 require('neoscroll').setup()
+require('tara.which')
 
 require 'nvim-web-devicons'.setup {
     -- your personnal icons can go here (to override)
