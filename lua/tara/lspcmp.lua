@@ -24,6 +24,7 @@ local on_attach = function(_, bufnr)
             vim.lsp.buf.formatting()
         end
     end, { desc = 'Format current buffer with LSP' })
+
 end
 
 -- nvim-cmp supports additional completion capabilities
@@ -33,9 +34,10 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require('mason').setup()
 
 -- Enable the following language servers
-local servers = { 'cssls', 'pylsp', 'angularls', 'html', 'clangd', 'rust_analyzer', 'pyright',
+local servers = { 'lemminx', 'cssls', 'pylsp', 'angularls', 'html', 'clangd', 'rust_analyzer', 'pyright',
     'tsserver',
     'sumneko_lua' }
+
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -45,7 +47,7 @@ require('mason-lspconfig').setup {
 
 for _, lsp in ipairs(servers) do
     require('lspconfig')[lsp].setup {
-        on_attach = on_attach,
+        on_attach = require("lsp-format").on_attach,
         capabilities = capabilities,
     }
 end
@@ -56,10 +58,6 @@ end
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
-
-require('lspconfig').cssls.setup {
-    on_attach = require("lsp-format").on_attach,
-}
 
 require('lspconfig').sumneko_lua.setup {
     on_attach = require("lsp-format").on_attach,
@@ -80,9 +78,6 @@ require('lspconfig').sumneko_lua.setup {
             telemetry = { enable = false },
         },
     },
-}
-require('lspconfig').html.setup {
-    on_attach = require("lsp-format").on_attach
 }
 
 -- nvim-cmp setup

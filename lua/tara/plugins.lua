@@ -30,9 +30,9 @@ require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter' -- Highlight, edit, and navigate code
     use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } } -- Additional textobjects for treesitter
     use { "lukas-reineke/lsp-format.nvim" }
-    use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
     use 'williamboman/mason.nvim' -- Manage external editor tooling i.e LSP servers
     use 'williamboman/mason-lspconfig.nvim' -- Automatically install language servers to stdpath
+    use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
     use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } } -- Autocompletion
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
