@@ -59,6 +59,7 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code Action
 vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, { desc = '[G]oto [D]efinition' })
 vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, { desc = '[G]oto [I]mplementation' })
 vim.keymap.set('n', '<leader>cr', require('telescope.builtin').lsp_references, { desc = 'References' })
+vim.keymap.set('n', '<leader>ct', ":TodoTrouble<CR>", { desc = "Show TODOs" })
 
 -- See `:help K` for why this keymap
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
