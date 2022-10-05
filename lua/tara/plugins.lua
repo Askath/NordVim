@@ -40,6 +40,18 @@ require('packer').startup(function(use)
     use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } } -- Autocompletion
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
     use "rafamadriz/friendly-snippets"
+    -- Lua
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
     use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines

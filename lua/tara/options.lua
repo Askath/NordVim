@@ -69,3 +69,10 @@ vim.keymap.set('n', '<leader>fk', ":e ~/.config/nvim/lua/tara/options.lua<CR>", 
 
 -- Format file
 vim.keymap.set('n', '<leader>ff', ":Format<CR>", { desc = "Format code" })
+
+-- Trouble
+vim.keymap.set('n', '<leader>td', ":TroubleToggle document_diagnostics<CR>", { desc = "Document Diagnostics" })
+vim.keymap.set('n', '<leader>twd', ":TroubleToggle workspace_diagnostics<CR>", { desc = "Workspace Diagnostics" })
+vim.keymap.set('n', '<leader>tr', ":TroubleToggle lsp_references<CR>", { desc = "References" })
+vim.keymap.set('n', '<leader>tq', ":TroubleToggle quickfix<CR>", { desc = "Quickfix" })
+vim.keymap.set('n', '<leader>tt', ":TroubleToggle<CR>", { desc = "Toggle" })
