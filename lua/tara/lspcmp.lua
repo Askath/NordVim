@@ -1,5 +1,13 @@
 require("lsp-format").setup {}
 require("luasnip/loaders/from_vscode").lazy_load()
+
+-- Lua
+require("lsp-colors").setup({
+    Error = "#db4b4b",
+    Warning = "#e0af68",
+    Information = "#0db9d7",
+    Hint = "#10B981"
+})
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)

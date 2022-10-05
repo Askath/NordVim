@@ -40,6 +40,7 @@ require('packer').startup(function(use)
     use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } } -- Autocompletion
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
     use "rafamadriz/friendly-snippets"
+    use "folke/lsp-colors.nvim"
     -- Lua
     use {
         "folke/trouble.nvim",
@@ -61,7 +62,7 @@ require('packer').startup(function(use)
 
     use 'kyazdani42/nvim-web-devicons'
 
-    use 'shaunsingh/nord.nvim'
+    use 'arcticicestudio/nord-vim'
 
     use 'j-hui/fidget.nvim'
     use {
